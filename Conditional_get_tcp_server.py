@@ -78,7 +78,7 @@ def main():
                 # compare the dates and see if we should send the file or not
                 if lastModified < request_mod_Time:
                     print "Not Modified %s" % filename
-                    send304(connectionSocket, '303', 'Not Modified')
+                    send304(connectionSocket, '304', 'Not Modified')
                     connectionSocket.close()
                     continue
             # send the file if the server have the most recent one
